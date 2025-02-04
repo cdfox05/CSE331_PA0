@@ -21,8 +21,10 @@ public class Driver {
         Solution student = new Solution(input);
         ArrayList<Integer> studentSolution = student.outputVector();
         
-        //System.out.println("Your solution:");
+        System.out.println("Your solution:");
         //System.out.println("=======================================================================================================");
-        System.out.println(studentSolution); 
+        System.out.println(studentSolution);
+
+
     }
 }

@@ -36,14 +36,15 @@ public class Solution {
 
         ArrayList<Integer> yValues = new ArrayList<>();
 
+        for (int i = 0; i < n; i++)
+            yValues.add(0);
+
         for (int i = 0; i < n; i++) {
+            //System.out.println("i: " + i);
             for (int j = 0; j < n; j++) {
-                if (j >= i && !yValues.contains(i))
+                if (j >= i)
                 {
-                    yValues.add(xValues.get(j));
-                }
-                else if (j >= i && yValues.contains(i))
-                {
+                    //System.out.println("j: " + j + " >= " + " i: " + i);
                     yValues.set(i, yValues.get(i) + xValues.get(j));
                 }
             }
