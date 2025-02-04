@@ -30,6 +30,26 @@ public class Solution {
      */
     public ArrayList<Integer> outputVector() {
 
-        return new ArrayList<Integer>();
+        ArrayList<Integer> xValues = this.in_vector;
+
+        int n = xValues.size();
+
+        ArrayList<Integer> yValues = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (j >= i && !yValues.contains(i))
+                {
+                    yValues.add(xValues.get(j));
+                }
+                else if (j >= i && yValues.contains(i))
+                {
+                    yValues.set(i, yValues.get(i) + xValues.get(j));
+                }
+            }
+        }
+
+
+        return yValues;
     }
 }
